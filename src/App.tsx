@@ -1,3 +1,4 @@
+// AMANLOKA Landing Page
 import React, { useRef, useEffect, useState, Suspense, lazy } from 'react';
 import { motion, useScroll, useTransform, useInView, animate, AnimatePresence, useSpring } from 'motion/react';
 import { X, Menu, Globe, Linkedin, Twitter, Github, ArrowUp, Download, FileText, Check } from 'lucide-react';
