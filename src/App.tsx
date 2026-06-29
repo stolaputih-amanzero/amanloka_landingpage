@@ -382,7 +382,7 @@ export default function App() {
       >
         <div className="flex items-center gap-3">
            {/* Logo Monogram */}
-           <div className="w-12 h-12 relative z-50">
+           <div className="w-8 h-8 relative z-50">
              <img src={amanLogo} alt="AMAN Monogram" className="w-full h-full object-contain" />
            </div>
            <span className="font-heading font-bold tracking-widest text-lg text-white z-50">AMANLOKA</span>
@@ -566,7 +566,7 @@ export default function App() {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="absolute bottom-12 opacity-50"
             >
-              <img src={amanLogo} alt="AMAN Logo" className="w-20 h-20 mx-auto grayscale opacity-50" />
+              <img src={amanLogo} alt="AMAN Logo" className="w-14 h-14 mx-auto grayscale opacity-50" />
             </motion.div>
           </motion.div>
         )}
@@ -597,14 +597,6 @@ export default function App() {
           className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center pt-20"
           style={{ y: yContent }}
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-8"
-          >
-             <img src={amanLogo} alt="AMAN Logo" className="w-48 md:w-64 mx-auto drop-shadow-2xl" />
-          </motion.div>
           
           <motion.div style={{ y: yTitle }}>
             <motion.h1 
@@ -941,7 +933,7 @@ export default function App() {
       {/* Footer */}
       <footer className="py-20 border-t border-white/5 bg-brand-black text-center relative z-10 snap-start">
          <div className="container mx-auto px-6">
-            <div className="w-20 h-20 mx-auto mb-8 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+            <div className="w-12 h-12 mx-auto mb-8 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
                <img src={amanLogo} alt="AMAN Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex items-center justify-center gap-6 mb-8">
