@@ -1,7 +1,7 @@
 // AMANLOKA Landing Page
 import React, { useRef, useEffect, useState, Suspense, lazy } from 'react';
 import { motion, useScroll, useTransform, useInView, animate, AnimatePresence, useSpring } from 'motion/react';
-import { X, Menu, Globe, Linkedin, Twitter, Github, ArrowUp, Download, FileText, Check } from 'lucide-react';
+import { X, Menu, Linkedin, Twitter, Github, ArrowUp, Download, FileText, Check } from 'lucide-react';
 import ChatInterface from './components/ChatInterface';
 import CustomCursor from './components/CustomCursor';
 import EcosystemCard from './components/EcosystemCard';
@@ -402,18 +402,16 @@ export default function App() {
           
           <button 
             onClick={toggleLanguage}
-            className="flex items-center gap-2 hover:text-brand-white transition-colors ml-4 focus:outline-none"
+            className="flex items-center hover:text-brand-white transition-colors ml-4 focus:outline-none"
           >
-            <Globe className="w-4 h-4" />
             <span>{lang === 'en' ? 'ID' : 'EN'}</span>
           </button>
         </div>
         <div className="md:hidden flex items-center gap-4 z-50">
           <button 
             onClick={toggleLanguage}
-            className="text-white focus:outline-none flex items-center gap-2 text-xs font-semibold tracking-widest uppercase"
+            className="text-white focus:outline-none flex items-center text-xs font-semibold tracking-widest uppercase"
           >
-            <Globe className="w-4 h-4" />
             <span>{lang === 'en' ? 'ID' : 'EN'}</span>
           </button>
           <button 
