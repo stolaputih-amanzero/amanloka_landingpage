@@ -322,6 +322,13 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   const yBackground = useTransform(scrollY, [0, 1000], ["0%", "50%"]);
   const opacityBackground = useTransform(scrollY, [0, 800], [0.6, 0]);
   const yContent = useTransform(scrollY, [0, 800], ["0%", "30%"]);
