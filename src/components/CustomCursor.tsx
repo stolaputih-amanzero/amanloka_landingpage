@@ -5,8 +5,20 @@ export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   useEffect(() => {
+    const checkIsMobile = () => {
+      const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isMobileQuery = window.matchMedia('(max-width: 768px)').matches;
+      return hasTouch || isMobileQuery;
+    };
+
+    if (checkIsMobile()) {
+      setIsMobileDevice(true);
+      return; // Skip mouse event listeners on touch/mobile devices
+    }
+
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       setIsVisible(true);
@@ -49,7 +61,7 @@ export default function CustomCursor() {
     };
   }, []);
 
-  if (!isVisible) return null;
+  if (isMobileDevice || !isVisible) return null;
 
   return (
     <motion.div
